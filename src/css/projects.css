@@ -1,0 +1,162 @@
+.projects {
+  padding: 24px 8px;
+}
+.projects h2 {
+  font-size: var(--title);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.project-row {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-inline: auto;
+}
+.project img {
+  width: 100%;
+  border-radius: 8px;
+  max-width: 342px;
+}
+@keyframes appearUp {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-121px);
+  }
+}
+
+.project-detail {
+  background-color: rgba(47, 47, 47, 0.95);
+  color: var(--surface);
+  padding: 16px;
+  border-radius: 0px 0px 8px 8px;
+  transform: translateY(-121px);
+  margin-bottom: -123px;
+  max-width: 342px;
+  visibility: hidden;
+}
+.project:hover {
+  .project-detail {
+    visibility: visible;
+    animation: appearUp 0.3s;
+  }
+}
+.project-detail h3 {
+  font-size: var(--semi-bold1);
+}
+.project-detail p {
+  font-size: var(--light1);
+  font-weight: 300;
+}
+.project-links {
+  display: flex;
+  gap: 16px;
+  padding: 8px 0 0;
+}
+.project-links svg {
+  font-size: var(--semi-bold1);
+  color: var(--surface);
+}
+.project-links a {
+  color: var(--surface);
+  font-size: var(--light1);
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+}
+.project-links a:hover {
+  color: #ffd800;
+
+  svg {
+    color: #ffd800;
+  }
+}
+.github-container {
+  background-color: var(--surface);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border-radius: 4px;
+  box-shadow: 0px 6px 30px 5px rgba(0, 0, 0, 0.15);
+}
+.github-container a {
+  text-decoration: none;
+}
+.github-container h3 {
+  width: 213px;
+  font-size: var(--semi-bold1);
+  font-weight: 700;
+  text-align: center;
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 425px) {
+  .projects {
+    padding: 24px 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .projects {
+    padding: 24px;
+  }
+  .projects h2 {
+    text-align: left;
+  }
+  .project-row {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 34px;
+  }
+  .github-container {
+    padding: 24px 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    border-radius: 4px;
+    width: 500px;
+    box-shadow: 0px 6px 30px 5px rgba(0, 0, 0, 0.15);
+  }
+}
+@media screen and (min-width: 769px) {
+  .project img {
+    max-width: 100%;
+  }
+  .project-detail {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .projects {
+    padding: 48px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .projects {
+    padding: 48px 72px;
+  }
+  .projects-container {
+    gap: 64px;
+  }
+  .project-row {
+    gap: 64px;
+  }
+}

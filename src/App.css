@@ -1,0 +1,51 @@
+:root {
+  --display-font: "Switzer";
+  --body-font: "Nunito Sans";
+  --h1: 48px;
+  --h2: 42px;
+  --title: 32px;
+  --semi-bold1: 24px;
+  --semi-bold2: 20px;
+  --regular: 18px;
+  --light1: 14px;
+  --light2: 13px;
+  --primary: #008e4c;
+
+  --surface: #f8f8f8;
+  --neutral: #2f2f2f;
+  --error: #b41313;
+  --black-5: rgba(47, 47, 47, 0.05);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--body-font);
+}
+
+body {
+  background: var(--surface);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 1366px;
+  margin-inline: auto;
+  box-shadow: 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+}
+@media screen and (min-width: 768px) {
+  .main-container {
+    margin-top: 48px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .main-container {
+    margin-top: 88px;
+    border-radius: 16px;
+  }
+}

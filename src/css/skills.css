@@ -1,0 +1,75 @@
+.skills {
+  padding: 24px 8px;
+}
+.skills h2 {
+  font-size: var(--title);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.skills-container {
+  width: 100%;
+  border-radius: 16px;
+  background-color: var(--black-5);
+  padding-block: 24px;
+}
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 32px;
+}
+.skill-text {
+  text-align: center;
+
+  h3 {
+    color: var(--primary);
+    font-size: var(--semi-bold1);
+    font-weight: 600;
+    padding: 16px 0 24px;
+  }
+}
+.skill-text p {
+  font-size: var(--light2);
+  width: 291px;
+}
+
+@media screen and (min-width: 425px) {
+  .skills {
+    padding: 24px 16px;
+  }
+  .skill-text p {
+    font-size: var(--light1);
+    width: 332px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .skills {
+    padding: 24px;
+  }
+  .skills h2 {
+    text-align: left;
+  }
+  .skill-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-inline: auto;
+  }
+}
+@media screen and (min-width: 769px) {
+  .skill-text p {
+    font-size: var(--regular);
+    width: 407px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .skills {
+    padding: 48px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .skills {
+    padding: 48px 72px;
+  }
+}

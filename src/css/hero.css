@@ -1,0 +1,142 @@
+.hero-container {
+  padding-top: 72px;
+  width: 100%;
+  max-width: 1366px;
+}
+.hero-img {
+  img {
+    &:nth-child(1) {
+      width: 100%;
+      padding: 24px 8px;
+    }
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.hero-text h1 {
+  font-size: var(--h2);
+  font-family: var(--display-font);
+  color: var(--neutral);
+  width: 255px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.hero-text h3 {
+  font-size: var(--semi-bold2);
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 24px;
+}
+.hero-text p {
+  font-size: var(--light1);
+  text-align: center;
+  width: 270px;
+  margin-bottom: 24px;
+}
+.hero-btn {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 425px) {
+  .hero-img {
+    display: flex;
+    justify-content: center;
+
+    img {
+      &:nth-child(1) {
+        padding: 24px 16px;
+        max-width: 425px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-img {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    img {
+      &:nth-child(1) {
+        display: none;
+      }
+      &:nth-child(2) {
+        display: flex;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .hero-container {
+    padding-top: 0px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 24px;
+  }
+  .hero-text {
+    padding-top: 124px;
+    align-items: flex-start;
+    width: 77%;
+  }
+  .hero-text h1 {
+    text-align: left;
+  }
+  .hero-text p {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-container {
+    padding-bottom: 64px;
+    padding-left: 48px;
+  }
+  .hero-text h1 {
+    font-size: var(--h1);
+    width: 295px;
+    margin-bottom: 8px;
+  }
+  .hero-text h3 {
+    font-size: var(--semi-bold1);
+  }
+  .hero-text p {
+    font-size: var(--light);
+    width: 270px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .hero-text p {
+    font-size: var(--regular);
+    width: 341px;
+  }
+  .hero-img {
+    width: 85%;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .hero-container {
+    padding-left: 72px;
+    border-radius: 16px;
+  }
+  .hero-img {
+    img {
+      &:nth-child(2) {
+        border-radius: 16px;
+      }
+    }
+  }
+}

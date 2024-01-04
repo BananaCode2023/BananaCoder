@@ -1,0 +1,72 @@
+.buttons .filledButton,
+.filledIcon {
+  font-size: var(--regular);
+  border-radius: 4px;
+  padding: 16px 24px;
+}
+.buttons .outlineButton,
+.outlineIcon {
+  font-size: var(--regular);
+  border-radius: 4px;
+  padding: 14px 24px;
+}
+button {
+  cursor: pointer;
+}
+.filledButton {
+  background-color: var(--primary);
+  color: var(--surface);
+  border: none;
+}
+.filledIcon {
+  background-color: var(--primary);
+  color: var(--surface);
+  border: none;
+  display: flex;
+  gap: 8px;
+
+  svg {
+    font-size: var(--semi-bold1);
+  }
+}
+.outlineButton {
+  background-color: var(--surface);
+  color: var(--primary);
+  border: solid 2px var(--primary);
+}
+.outlineIcon {
+  background-color: var(--surface);
+  color: var(--primary);
+  border: solid 2px var(--primary);
+  display: flex;
+  gap: 8px;
+
+  svg {
+    font-size: var(--semi-bold1);
+  }
+}
+.filledIcon,
+.filledButton,
+.outlineButton,
+.outlineIcon {
+  transition: 0.15s;
+}
+
+.filledIcon.hovered,
+.filledButton.hovered {
+  margin-top: -2px;
+  margin-inline: -1px;
+  margin-bottom: 2px;
+  transform: translateY(-2px);
+  padding: 16px 25px;
+  box-shadow: 3px 3px 30px 5px rgba(0, 0, 0, 0.06);
+}
+.outlineButton.hovered,
+.outlineIcon.hovered {
+  margin-top: -2px;
+  margin-inline: -1px;
+  margin-bottom: 2px;
+  transform: translateY(-2px);
+  padding: 14px 25px;
+  box-shadow: 3px 3px 30px 5px rgba(0, 0, 0, 0.06);
+}
